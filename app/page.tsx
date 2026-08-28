@@ -14,7 +14,7 @@ type Language = keyof typeof languages;
 
 export default function Home() {
   const [lang, setLang] = useState<Language>('en-GB');
-  const [text, setText] = useState(languages['en-GB'].placeholder);
+  const [text, setText] = useState<string>(languages['en-GB'].placeholder);
   const [rate, setRate] = useState(110);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
